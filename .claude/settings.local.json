@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\oxiro\\\\OneDrive - 5nk6fx\\\\wdev26\\\\carga-cli\\\\pantalla-cli-loader\" -Recurse -File)",
+      "Bash(Select-Object FullName)",
+      "Bash(git -C \"c:\\\\Users\\\\oxiro\\\\OneDrive - 5nk6fx\\\\wdev26\\\\carga-cli\\\\pantalla-cli-loader\" log --oneline -10)",
+      "Bash(find \"c:\\\\Users\\\\oxiro\\\\OneDrive - 5nk6fx\\\\wdev26\" -name \"Cargo.toml\" -maxdepth 4 2>/dev/null | head -20)",
+      "Read(//c/Users/oxiro/OneDrive - 5nk6fx/wdev26/**)"
+    ]
+  }
+}
