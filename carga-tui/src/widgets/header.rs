@@ -1,5 +1,5 @@
 use ratatui::{
-    layout::{Alignment, Rect},
+    layout::Rect,
     style::{Modifier, Style},
     text::{Line, Span},
     widgets::Paragraph,
@@ -36,18 +36,6 @@ pub fn render_sep(frame: &mut Frame, th: &ThemeColors, area: Rect) {
     );
 }
 
-pub fn render_left_title(frame: &mut Frame, th: &ThemeColors, area: Rect) {
-    let line = Line::from(vec![
-        Span::styled("● ", Style::default().fg(th.accent)),
-        Span::styled("Árbol de carpetas", Style::default().fg(th.term_dim)),
-        Span::styled("  3 dirs · 1 sel", Style::default().fg(th.term_mute)),
-    ]);
-    frame.render_widget(
-        Paragraph::new(line).style(Style::default().bg(th.term_bg)),
-        area,
-    );
-}
-
 pub fn render_right_title(frame: &mut Frame, th: &ThemeColors, area: Rect) {
     let line = Line::from(vec![
         Span::styled("● ", Style::default().fg(th.accent)),
@@ -80,15 +68,6 @@ pub fn render_hotkeys(frame: &mut Frame, th: &ThemeColors, area: Rect) {
 
     frame.render_widget(
         Paragraph::new(Line::from(spans)).style(Style::default().bg(th.term_bg)),
-        area,
-    );
-}
-
-pub fn render_hint_right(frame: &mut Frame, th: &ThemeColors, area: Rect) {
-    frame.render_widget(
-        Paragraph::new("Tab: cambiar tema")
-            .alignment(Alignment::Right)
-            .style(Style::default().fg(th.term_mute).bg(th.term_bg)),
         area,
     );
 }

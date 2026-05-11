@@ -98,4 +98,5 @@ pub static LOG_POOL: &[LogLine] = &[
     LogLine { ts: "12:04:12", level: LogLevel::Ok,   msg: "batch final 13/13 · 12 500 filas insertadas" },
     LogLine { ts: "12:04:12", level: LogLevel::Ok,   msg: "verificando integridad referencial (3 fk)" },
     LogLine { ts: "12:04:13", level: LogLevel::Ok,   msg: "COMMIT · proceso_id=42  status=DONE" },
+    LogLine { ts: "12:04:14", level: LogLevel::Err,  msg: "conexión perdida · reintentando en 3 s…" },
 ];
